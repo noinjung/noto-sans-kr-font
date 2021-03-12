@@ -1,3 +1,4 @@
+$notos-font-path: "./fonts" !default;
 $fonts-list: (
   NotoSansKR-Light: (
     "Noto Sans KR",
@@ -33,10 +34,11 @@ $font-weight: (
 @each $key, $val in $fonts-list {
   @font-face {
     @include fonts(nth($val, 1), map-get($font-weight, nth($val, 2)));
-    src: local("Noto Sans KR #{nth($val, 2)}");
-    src: url("fonts/#{$key}.eot");
-    src: url("fonts/#{$key}.eot?#iefix") format("embedded-opentype"),
-      url("fonts/#{$key}.woff2") format("woff2"),
-      url("fonts/#{$key}.woff") format("woff");
+    src: local("#{$key} #{nth($val, 2)}");
+    src: url("#{$notos-font-path}/#{$key}.eot");
+    src: url("#{$notos-font-path}/#{$key}.eot?#iefix")
+        format("embedded-opentype"),
+      url("#{$notos-font-path}/#{$key}.woff2") format("woff2"),
+      url("#{$notos-font-path}/#{$key}.woff") format("woff");
   }
 }

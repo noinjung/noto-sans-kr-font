@@ -1,6 +1,6 @@
 {
   "name": "noto-sans-kr-font",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Noto Sans KR Font Package",
   "main": "styles.css",
   "scripts": {
