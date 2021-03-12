@@ -1,0 +1,23 @@
+{
+  "name": "noto-sans-kr-font",
+  "version": "0.0.1",
+  "description": "Noto Sans KR Font Package",
+  "main": "styles.css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Roar-Song/noto-sans-kr-font.git"
+  },
+  "keywords": [
+    "noto-sans-kr",
+    "font"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Roar-Song/noto-sans-kr-font/issues"
+  },
+  "homepage": "https://github.com/Roar-Song/noto-sans-kr-font#readme"
+}
