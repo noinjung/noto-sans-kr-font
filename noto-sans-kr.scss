@@ -1,0 +1,42 @@
+$fonts-list: (
+  NotoSansKR-Light: (
+    "Noto Sans KR",
+    "Light",
+  ),
+  NotoSansKR-Regular: (
+    "Noto Sans KR",
+    "Regular",
+  ),
+  NotoSansKR-Medium: (
+    "Noto Sans KR",
+    "Medium",
+  ),
+  NotoSansKR-Bold: (
+    "Noto Sans KR",
+    "Bold",
+  ),
+);
+
+$font-weight: (
+  Light: 300,
+  Regular: 400,
+  Medium: 500,
+  Bold: 700,
+);
+
+@mixin fonts($family, $weight) {
+  font-family: $family, sans-serif;
+  font-weight: $weight;
+  font-style: normal;
+}
+
+@each $key, $val in $fonts-list {
+  @font-face {
+    @include fonts(nth($val, 1), map.get($font-weight, nth($val, 2)));
+    src: local("Noto Sans KR #{nth($val, 2)}");
+    src: url("fonts/#{$key}.eot");
+    src: url("fonts/#{$key}.eot?#iefix") format("embedded-opentype"),
+      url("fonts/#{$key}.woff2") format("woff2"),
+      url("fonts/#{$key}.woff") format("woff");
+  }
+}
