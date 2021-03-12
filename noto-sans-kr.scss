@@ -32,7 +32,7 @@ $font-weight: (
 
 @each $key, $val in $fonts-list {
   @font-face {
-    @include fonts(nth($val, 1), map.get($font-weight, nth($val, 2)));
+    @include fonts(nth($val, 1), map-get($font-weight, nth($val, 2)));
     src: local("Noto Sans KR #{nth($val, 2)}");
     src: url("fonts/#{$key}.eot");
     src: url("fonts/#{$key}.eot?#iefix") format("embedded-opentype"),
